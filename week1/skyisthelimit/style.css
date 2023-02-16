@@ -1,0 +1,76 @@
+
+body{
+    background-color: #292E38;
+}
+#header{
+    height: 100vh;
+    width: 100vw;
+    margin-top: -8px;
+    margin-left: -8px;
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("assets/background.jpg"); 
+    text-align: center;
+}
+#titre_logo {
+    border: 2px solid red;
+    text-align: center;
+    display: inline-block;
+    }
+p{
+    color: aliceblue;
+    font-size: 400%;
+    border: 2px solid green;
+}
+#container p {
+    color : black;  
+    margin: 5px;  
+    font-size: 100%;
+}
+
+span{
+    font-style: oblique;
+}
+
+#header p{
+    
+}
+#logo{   
+   border: 2px solid green;
+   height: 150px;
+   width: 150px;
+   position: relative;
+   top: 0px;
+}
+
+.image{
+    border-radius: 10%;
+    height: 40%;
+    width: 40%;
+}
+
+#container {
+
+    text-align: center;
+    height:max-content;
+    width: 70%;
+    border: 2px solid rgb(0, 255, 221);
+    background-color: rgb(255, 255, 255);
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: stretch;
+    
+}
+.row{
+    
+    width: 1OO%;
+    display: inline-flex;
+
+    border: 2px solid rgb(240, 33, 136);
+    margin: 2px;
+    background-color: rgb(255, 255, 255);
+}
+
+
