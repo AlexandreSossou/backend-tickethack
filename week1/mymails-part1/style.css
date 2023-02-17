@@ -1,4 +1,4 @@
-/* UI Kit
+/* UI Kit */
 #container-uikit {
   display: flex;
   flex-direction: column;
@@ -47,7 +47,7 @@
   margin-left: 1vw;
   font-size: 20px;
   font-family: "Verdana", "Tahoma", sans-serif;
-} */
+}
 body{
   
   border: 10px solid black;
@@ -69,15 +69,31 @@ body{
   grid-row-end: 2 ;
   grid-column-start: 1;
   grid-column-end:13 ;
+  background-color: #207BF5;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
  }
  #content {
   border: 1px black solid;
   text-align: center;
+  grid-row-start: 2;
+  grid-row-end: 12 ;
+  grid-column-start: 6;
+  grid-column-end:13 ;
+  background-color: rgb(242,244,248);
  }
 
  #menu{
   border: 1px black solid;
   text-align: center;
+  grid-row-start: 2;
+  grid-row-end: 12 ;
+  grid-column-start: 1;
+  grid-column-end:6 ;
+  background-color: rgb(242,244,248);
  }
 
  #footer {
@@ -87,5 +103,59 @@ body{
   grid-row-end: 13 ;
   grid-column-start: 1;
   grid-column-end:13 ;
+  background-color: #FEFFFF;
  }
 
+#logo{
+  font-family: 'Open Sans', sans-serif;
+  width: 80px;
+}
+
+#avatar{
+width:  60px;
+border-radius: 50%;
+
+}
+
+#btn-search:hover {
+  border: 1px solid white;
+  
+}
+#btn-add:hover {
+  border: 1px solid white;
+}
+
+#titre{
+  color: #77A6E0;
+}
+
+#titres{
+  color: white;
+}
+
+#text{
+  width: 40%;
+  margin: 0px 10px;
+}
+h6{
+  font-size: 16px;
+  font-family:Open Sans normal;
+}
+p{
+  font-size: 14px;
+  font-family: Open Sans normal;
+  text-align: left;
+}
+span{
+  font-size: 14px;
+  font-family:Open Sans normal;
+}
+.message{
+  display: flex;
+
+}
+h1{
+  
+  font-size: 30px;
+  font-family:Varela Round normal;
+}
