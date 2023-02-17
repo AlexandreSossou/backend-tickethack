@@ -76,7 +76,7 @@ body{
   align-items: center;
 
  }
- #content {
+ #msg-container {
   border: 1px black solid;
   text-align: center;
   grid-row-start: 2;
@@ -86,7 +86,7 @@ body{
   background-color: rgb(242,244,248);
  }
 
- #menu{
+ #add-section{
   border: 1px black solid;
   text-align: center;
   grid-row-start: 2;
