@@ -54,3 +54,53 @@ body {
   flex-direction: row;
   justify-content: flex-start;
 }
+
+.color{
+     width: 85px;
+     height: 85px;
+     border: 1px solid black;
+}
+
+.darkblue{
+    color: #03045e;
+    border-radius: 10%;
+    
+}
+.grey{
+    background-color: #ced4da;  
+    border-radius: 10%;
+}
+.darkgrey{
+    background-color:#212529;
+    border-radius: 10%;
+}
+.blue{
+  background-color: #023e8a;
+  border-radius: 10%;
+}
+.lightblue{
+  background-color : #caf0f8;
+  border-radius: 10%;
+}
+
+.btn{
+  background-color : #03045e;
+  width: 120px;
+  border-radius: 4px;
+  cursor: cell;
+}
+.btn:hover{
+  background-color: #023e8a;
+
+}
+
+#content{
+  display: grid;
+  border: 1px solid black;
+  grid-template-rows: repeat(4, 200px);
+ grid-template-columns: repeat(4, 400px);
+}  
+#tableau{
+  border: 1px solid black;
+  
+}
