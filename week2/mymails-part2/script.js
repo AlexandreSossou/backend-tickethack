@@ -37,18 +37,17 @@ let day = mydate.getDate()
 
 
 let heure = mydate.getHours();
-let minutes = date.getMinutes();
+let minutes = mydate.getMinutes();
 
 
 
 // Expected output: 1969
 
-const date = year + '-'+ month +'-'+ day
+const date = year + '-'+ month +'-'+ day + " " + heure + ':' + minutes
 
 document.querySelector('#footer > span').textContent += date
 
-
-
 console.log(document.querySelector('#footer > span').textContent)
+
 
 
