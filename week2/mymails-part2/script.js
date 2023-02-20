@@ -39,15 +39,18 @@ let day = mydate.getDate()
 let heure = mydate.getHours();
 let minutes = mydate.getMinutes();
 
-
+//Ajoutez une nouvelle balise span à la div “footer” portant l’id “date” et donnez lui pour valeur celle de la variable “date” nouvellement créée.
+document.querySelector('#footer').innerHTML += `<span id ="date"/>`
 
 // Expected output: 1969
 
 const date = year + '-'+ month +'-'+ day + " " + heure + ':' + minutes
 
-document.querySelector('#footer > span').textContent += date
+document.querySelector('#date').textContent += date
 
-console.log(document.querySelector('#footer > span').textContent)
+console.log(document.querySelector('#date').textContent)
+
+
 
 
 
