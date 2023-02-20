@@ -28,24 +28,24 @@ document.querySelector('#count').textContent = document.querySelectorAll('.avata
 
 
 
-let date = new Date();
+let mydate = new Date();
 
 
-let year = date.getFullYear()
-let month = date.getMonth() +1
+let year = mydate.getFullYear()
+let month = mydate.getMonth() +1
+let day = mydate.getDate()
 
-let day = date.getDate()
-console.log(day)
-let heure = date.getHours();
+
+let heure = mydate.getHours();
 let minutes = date.getMinutes();
 
 
-console.log(year)
+
 // Expected output: 1969
 
+const date = year + '-'+ month +'-'+ day
 
-
-document.querySelector('#footer > span').textContent += " "+ year + "-" + month + "-" + day 
+document.querySelector('#footer > span').textContent += date
 
 
 
