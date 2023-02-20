@@ -30,9 +30,12 @@ document.querySelector('#count').textContent = document.querySelectorAll('.avata
 
 let date = new Date();
 
+
 let year = date.getFullYear()
-let month = date.getMonth()
-let day = date.getDay()
+let month = date.getMonth() +1
+
+let day = date.getDate()
+console.log(day)
 let heure = date.getHours();
 let minutes = date.getMinutes();
 
