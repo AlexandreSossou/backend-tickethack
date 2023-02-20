@@ -45,7 +45,9 @@ console.log(year)
 
 
 
-document.querySelector('#footer > span').textContent += " "+ year + "-" + month + "-" + day + " " + heure + ":" + minutes
+document.querySelector('#footer > span').textContent += " "+ year + "-" + month + "-" + day 
+
+
 
 console.log(document.querySelector('#footer > span').textContent)
 
