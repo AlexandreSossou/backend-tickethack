@@ -107,11 +107,13 @@ d.addEventListener('click',function(){
    
     if(z ===false){
       console.log("non")
-      let textToHide=b[i]
+      let textToHide=document.querySelectorAll(".row")[i]
       textToHide.style.display = "none";
     }
     else{
       console.log("oui")
+      let textToShow=document.querySelectorAll(".row")[i]
+      textToShow.style.display = "flex";
     }
   }  
   e.value = "";
