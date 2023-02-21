@@ -94,24 +94,22 @@ console.log("moteur de recherche")
 
 
 d.addEventListener('click',function(){
-  textToCompare = e.value.toLowerCase();
+  textToCompare = document.querySelector('#search-message').value;
 
   for (let i =0; i<f.length;i++){
     
-    b[i].style.display="flex"
-    let y = f[i].textContent.toLowerCase();
-    let z = y.includes(textToCompare)
-    console.log(y)
+    document.querySelectorAll(".row")[i].style.display="flex"
+    
     console.log(textToCompare)
-    console.log(z)
+    
    
     if(document.querySelectorAll('h6')[i].textContent.toLowerCase().includes(textToCompare) === false) {
-      console.log("non")
+     
       let textToHide=document.querySelectorAll(".row")[i]
       textToHide.style.display = "none";
     }
     else{
-      console.log("oui")
+      
       let textToShow=document.querySelectorAll(".row")[i]
       textToShow.style.display = "flex";
     }
