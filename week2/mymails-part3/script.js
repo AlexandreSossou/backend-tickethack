@@ -105,7 +105,7 @@ d.addEventListener('click',function(){
     console.log(textToCompare)
     console.log(z)
    
-    if(z ===false){
+    if(document.querySelectorAll('h6')[i].textContent.toLowerCase().includes(textToCompare) === false) {
       console.log("non")
       let textToHide=document.querySelectorAll(".row")[i]
       textToHide.style.display = "none";
