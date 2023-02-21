@@ -74,13 +74,13 @@ c.addEventListener('click',function(){
 
   //suppression après dans la liste des créés
 
-  let t = document.querySelectorAll(".delete")
-  let g = document.querySelectorAll(".row")
+  a = document.querySelectorAll(".delete")
+  b = document.querySelectorAll(".row")
   
-  for (let i=0; i<t.length;i++){
-    t[i].addEventListener("click", 
+  for (let i=0; i<a.length;i++){
+    a[i].addEventListener("click", 
     function(){
-      g[i].remove();
+      b[i].remove();
       messagesCount = document.querySelectorAll('p').length;//Compteur messages
       document.querySelector('#count').textContent = messagesCount;//compteur
     })
@@ -100,10 +100,10 @@ d.addEventListener('click',function(){
     
     b[i].style.display="flex"
     let y = f[i].textContent.toLowerCase();
-    //let z = y.indexOf(textToCompare);
     let z = y.includes(textToCompare)
     console.log(y)
     console.log(textToCompare)
+    console.log(z)
    
     if(z ===false){
       console.log("non")
@@ -115,5 +115,4 @@ d.addEventListener('click',function(){
     }
   }  
   e.value = "";
-  
 })
