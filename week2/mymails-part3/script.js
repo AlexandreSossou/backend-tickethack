@@ -104,13 +104,14 @@ d.addEventListener('click',function(){
     let z = y.includes(textToCompare)
     console.log(y)
     console.log(textToCompare)
-    if (z){
-      console.log("oui")
-    }
-    else{
+   
+    if(z ===false){
       console.log("non")
       let textToHide=b[i]
       textToHide.style.display = "none";
+    }
+    else{
+      console.log("oui")
     }
   }  
   e.value = "";
