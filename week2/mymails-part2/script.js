@@ -35,7 +35,6 @@ let year = mydate.getFullYear()
 let month = mydate.getMonth() +1
 let day = mydate.getDate()
 
-
 let heure = mydate.getHours();
 let minutes = mydate.getMinutes();
 
