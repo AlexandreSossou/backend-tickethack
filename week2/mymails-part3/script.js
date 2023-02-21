@@ -115,5 +115,5 @@ d.addEventListener('click',function(){
     }
   }  
   e.value = "";
-  return textToHide
+  
 })
