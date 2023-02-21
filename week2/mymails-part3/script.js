@@ -95,21 +95,16 @@ d.addEventListener('click',function(){
   textToCompare = document.querySelector('#search-message').value.toLowerCase();
 
   for (let i =0; i<f.length;i++){
-    
-    
-    
     console.log(textToCompare)
-    
-   
     if(document.querySelectorAll('h6')[i].textContent.toLowerCase().includes(textToCompare) === false) {
      
-      const k =document.querySelectorAll(".row")[i]
+      const k =document.querySelectorAll('h6')[i].parentNode.parentNode;
       k.style.display = "none";
      
     }
     else{
       
-      let q=document.querySelectorAll(".row")[i]
+      let q=document.querySelectorAll('h6')[i].parentNode.parentNode;
       q.style.display = "flex"
     
     }
