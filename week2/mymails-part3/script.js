@@ -96,7 +96,7 @@ console.log("moteur de recherche")
 d.addEventListener('click',function(){
   textToCompare = e.value.toLowerCase();
   
-  e.value = "";
+  e.value = "none";
   
 
   for (let i =0; i<f.length;i++){
