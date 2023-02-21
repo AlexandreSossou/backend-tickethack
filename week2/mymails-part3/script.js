@@ -108,6 +108,7 @@ d.addEventListener('click',function(){
    
     if (z!=-1){
       console.log("oui")
+      b[i].style.display = "flex";
     }
     else{
       console.log("non")
