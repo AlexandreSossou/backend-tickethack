@@ -108,11 +108,13 @@ d.addEventListener('click',function(){
    
     if (z!=-1){
       console.log("oui")
-      b[i].style.display = "flex";
+      let textToShow=b[i]
+      textToShow.style.display = "flex";
     }
     else{
       console.log("non")
-      b[i].style.display = "none";
+      let textToHide=b[i]
+      textToHide.style.display = "none";
     }
   }  
   
