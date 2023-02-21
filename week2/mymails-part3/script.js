@@ -95,18 +95,20 @@ console.log("moteur de recherche")
 
 d.addEventListener('click',function(){
   textToCompare = e.value.toLowerCase();
+  console.log(textToCompare)
   
-  e.value = "none";
+  e.value = "";
   
 
   for (let i =0; i<f.length;i++){
     b[i].style.display="flex"
     let y = f[i].textContent.toLowerCase();
     console.log("on examine : "+y)
-    let z = y.indexOf(textToCompare);
+    //let z = y.indexOf(textToCompare);
+    let z = y.includes(textToCompare)
     console.log("présent ?  " +z)
    
-    if (z!=-1){
+    if (z){
       console.log("oui")
       let textToShow=b[i]
       textToShow.style.display = "flex";
