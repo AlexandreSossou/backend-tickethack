@@ -91,29 +91,29 @@ c.addEventListener('click',function(){
 // ---------------  moteur de recherche--------------
 console.log("moteur de recherche")
 
-
-
 d.addEventListener('click',function(){
-  textToCompare = document.querySelector('#search-message').value;
+  textToCompare = document.querySelector('#search-message').value.toLowerCase();
 
   for (let i =0; i<f.length;i++){
     
-    document.querySelectorAll(".row")[i].style.display="flex"
+    
     
     console.log(textToCompare)
     
    
     if(document.querySelectorAll('h6')[i].textContent.toLowerCase().includes(textToCompare) === false) {
      
-      const textToShow=document.querySelectorAll(".row")[i]
-      textToShow.style.display = "none";
+      const k =document.querySelectorAll(".row")[i]
+      k.style.display = "none";
      
     }
     else{
       
-      let textToHide=document.querySelectorAll(".row")[i]
-      textToHide.style.display = "flex";
+      let q=document.querySelectorAll(".row")[i]
+      q.style.display = "flex"
+    
     }
   }  
   e.value = "";
+  return textToHide
 })
