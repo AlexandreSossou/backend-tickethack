@@ -105,14 +105,14 @@ d.addEventListener('click',function(){
    
     if(document.querySelectorAll('h6')[i].textContent.toLowerCase().includes(textToCompare) === false) {
      
-      let textToShow=document.querySelectorAll(".row")[i]
-      textToShow.style.display = "flex";
+      const textToShow=document.querySelectorAll(".row")[i]
+      textToShow.style.display = "none";
      
     }
     else{
       
       let textToHide=document.querySelectorAll(".row")[i]
-      textToHide.style.display = "none";
+      textToHide.style.display = "flex";
     }
   }  
   e.value = "";
