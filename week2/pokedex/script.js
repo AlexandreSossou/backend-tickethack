@@ -1,5 +1,5 @@
 // Insert your code here
-for (let i =0;i<15;i++){  
+for (let i =1;i<16;i++){  
         fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
         .then(response => response.json())
         .then(data => {               
