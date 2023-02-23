@@ -9,9 +9,9 @@ function displayAllArticles() {
 
 
 function displayArticleByName(articleName) {
-	db.findOne({ "name": articleName })
+	db.findOne({"name": articleName })
  .then(data => {
-   console.log(data);
+   return data;
  });
 }
 
