@@ -23,7 +23,7 @@ function displayArticleByID(articleId) {
  });
 }
 
-displayArticleByID('625ea9ca38d6a3776994651f');
+//displayArticleByID('625ea9ca38d6a3776994651f');
 
 //test
 function updateArticlePrice(articleId, newPrice) {
@@ -39,7 +39,7 @@ function updateArticleStock(articleId, newStock) {
 
 //test
 function resetStocks() {
-	db.updateMany({ "stock": 0 })
+	db.updateMany({ "stock": [] })
 }
 
 
