@@ -1,4 +1,4 @@
 // Insert your connection string inside this variable
-const connectionString = 'mongodb+srv://.../apiscraping';
+const connectionString = 'mongodb+srv://TriplePatte:PymACPQ5lJo4t07g@cluster0.nehyygn.mongodb.net/apiscraping';
 
 module.exports = connectionString; // Do not edit/remove this line
