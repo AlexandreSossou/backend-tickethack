@@ -39,7 +39,7 @@ function updateArticleStock(articleId, newStock) {
 
 //test
 function resetStocks() {
-	db.updateMany({{}, "stock": 0 })
+	db.updateMany({}, {"stock": 0 })
 }
 
 
