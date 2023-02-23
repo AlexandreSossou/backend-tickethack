@@ -1,6 +1,6 @@
 const db = require('./database/setup'); // Do not edit/remove this line
 
-//test
+//Display 
 function displayAllArticles() {
 	db.find().then(data => {
 		console.log(data);
@@ -11,13 +11,13 @@ function displayAllArticles() {
 function displayArticleByName(articleName) {
 	db.findOne({"name": articleName })
  .then(data => {
-   return data;
+   console.log(data);
  });
 }
 
-//test
+//te
 function displayArticleByID(articleId) {
-	db.findOne({ "_id": articleId })
+	db.findById(articleId)
  .then(data => {
    console.log(data);
  });
@@ -32,15 +32,14 @@ function updateArticlePrice(articleId, newPrice) {
  ;
 }
 
-//test
+//updateArticleStock
 function updateArticleStock(articleId, newStock) {
-	db.updateOne({ "_id": articleId },{"stock":newStock})
+	db.updateOne({ "_id": articleId },{"stock": newStock})
 }
 
 //test
 function resetStocks() {
-	
-	db.updateMany({ stock: 0 })
+	db.updateMany({ "stock": 0 })
 }
 
 
