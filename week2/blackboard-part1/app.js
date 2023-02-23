@@ -7,7 +7,7 @@ function displayAllArticles() {
 	  });
 }
 
-//test
+//Display by name
 function displayArticleByName(articleName) {
 	db.findOne({"name": articleName })
  .then(data => {
