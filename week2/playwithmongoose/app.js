@@ -6,8 +6,8 @@ function createTodo(name, priority) {
 
 
 const newUser = new db({
-    "name": this.name,
-    "priority": this.priority,
+    "name": name,
+    "priority": priority,
     "done":false,
    });
    
@@ -19,7 +19,7 @@ const newUser = new db({
 // Complete one todo by name (update property done = true)
 function completeTodo(name) {
     db.updateOne(
-        { "name": this.name}, 
+        { "name": name}, 
         {"done":true},
        );
        
@@ -29,7 +29,7 @@ function completeTodo(name) {
 
 // Delete one todo by name
 function deleteTodo(name) {
-    db.deleteOne({ "name": this.name });
+    db.deleteOne({ "name": name });
        
     
 
