@@ -3,11 +3,8 @@ const db = require('./database/setup');
 // Do not edit/remove code above this line
 
 // // Insert your code here
-// const test = new db({
-//     "name":"Test",
-//     "family":"test"
-// });
-// test.save();
+
+
 
 fetch(`https://fruityvice.com/api/fruit/all`)
         .then(response => response.json())
@@ -37,3 +34,6 @@ fetch(`https://fruityvice.com/api/fruit/all`)
 
          
         });
+
+
+        
