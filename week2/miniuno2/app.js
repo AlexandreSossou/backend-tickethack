@@ -6,7 +6,7 @@ const Play = require('./models/plays');
 
 function playUno(cards, lastPlay) {
 		for (let i =0; i < cards.length; i++){
-			if (cards[i].color === lastPlay.color || cards[i].number === lastPlay.number){
+			//if (cards[i].color === lastPlay.color || cards[i].number === lastPlay.number){
 			const newPlay = new Play({
 				color : cards[i].color,
 				number : cardsExample[i].number,
@@ -14,7 +14,7 @@ function playUno(cards, lastPlay) {
 			   newPlay.save().then(newDoc => {
 				console.log(newDoc);
 			   });
-		}
+		//}
 	}
 
 
