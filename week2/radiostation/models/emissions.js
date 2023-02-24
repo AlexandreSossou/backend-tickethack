@@ -3,7 +3,7 @@ const mongoose = require("mongoose")
 // Insert your code here
 
 const monSchema = mongoose.Schema({
-    discontinuated: Boolean,
+    discontinued: Boolean,
     mainAnimator: String,
     name: String,
     nbAnimators: Number,

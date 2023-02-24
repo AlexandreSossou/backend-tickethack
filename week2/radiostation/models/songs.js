@@ -6,7 +6,7 @@ const shemaSong = mongoose.Schema({
     annoying: Boolean,
     artist: String,
     creationDate: Date,
-    title: Number,
+    title: String,
 
 })
 
