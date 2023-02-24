@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+mongoose.set('strictQuery', false);
 const connectionString = 'mongodb+srv://TriplePatte:PymACPQ5lJo4t07g@cluster0.nehyygn.mongodb.net/miniuno';
 
 mongoose.connect(connectionString, { connectTimeoutMS: 2000 })
