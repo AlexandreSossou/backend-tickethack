@@ -5,16 +5,18 @@ const Play = require('./models/plays');
 
 
 function playUno(cards, lastPlay) {
+	
 		for (let i =0; i < cards.length; i++){
-			//if (cards[i].color === lastPlay.color || cards[i].number === lastPlay.number){
+			for (let y = 0;y<cards.length;y++){
+			if (cards[y].color === lastPlay.color || cards[y].number === lastPlay.number){
 			const newPlay = new Play({
-				color : cards[i].color,
-				number : cardsExample[i].number,
+				color : cards[y].color,
+				number : cardsExample[y].number,
 			   });
 			   newPlay.save().then(newDoc => {
 				console.log(newDoc);
-			   });
-		//}
+			   });}
+		}
 	}
 
 
