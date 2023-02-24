@@ -11,6 +11,7 @@ function playUno(cards, lastPlay) {
 				
 				
 			for (let y = 0;y<cards.length;y++){
+
 				if (cards[y].color === lastPlay.color || cards[y].number === lastPlay.number){
 				const newPlay = new Play({
 					color : cards[y].color,
@@ -20,6 +21,7 @@ function playUno(cards, lastPlay) {
 					console.log(newDoc);
 				});
 				}
+				
 			}
 
 
