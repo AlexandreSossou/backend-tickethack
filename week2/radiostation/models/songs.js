@@ -5,7 +5,7 @@ const mongoose = require("mongoose")
 const shemaSong = mongoose.Schema({
     annoying: Boolean,
     artist: String,
-    creationDate: new Date(),
+    creationDate: Date,
     title: Number,
 
 })
