@@ -1,8 +1,8 @@
 // Add your own requires here 😉
 require('./models/connexion');
-const Order = require('./models/order');
-const User = require('./models/user');
-const Article = require('./models/article');
+const Order = require('./models/orders');
+const User = require('./models/users');
+const Article = require('./models/articles');
 
 
 /*
