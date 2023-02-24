@@ -75,7 +75,7 @@ function displayAllOrders() {
 }
 
 function updateOrderPaymentStatus(orderId, isPaid) {
-	Order.updateOne({ _id: orderId }, { paid: true }).then(() => {
+	Order.updateOne({ _id: orderId }, { isPaid: isPaid }).then(() => {
 		console.log(`Price updated for ${orderId}`);
 	});
  }
