@@ -11,6 +11,6 @@ purchaseDate: Date,
 
 });
 
-const Orders = mongoose.model('orders', OrderSchema);
+const Order = mongoose.model('orders', OrderSchema);
 
-module.exports = Orders;
+module.exports = Order;
