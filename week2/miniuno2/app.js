@@ -10,7 +10,7 @@ function playUno(cards, lastPlay) {
 			
 				const newPlay = new Play({
 					color : cards[i].color,
-					number : cardsExample[i].number,
+					number : cards[i].number,
 				});
 				newPlay.save().then(newDoc => {
 					console.log(newDoc);
@@ -20,7 +20,7 @@ function playUno(cards, lastPlay) {
 				if (cards[y].color === lastPlay.color || cards[y].number === lastPlay.number){
 				const newPlay = new Play({
 					color : cards[y].color,
-					number : cardsExample[y].number,
+					number : cards[y].number,
 				});
 				newPlay.save().then(newDoc => {
 					console.log(newDoc);
