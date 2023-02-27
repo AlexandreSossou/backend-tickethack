@@ -14,6 +14,9 @@ function displayAllArticles() {
 	});
 }
 
+
+//displayAllArticles();
+
 function displayArticleByName(articleName) {
 	Article.findOne({ name: articleName }).then(data => {
 		console.log('ARTICLE =>', data);
@@ -54,12 +57,15 @@ function displayAllUsers() {
 		console.log('USERS =>', data);
 	});
 }
+//displayAllUsers();
 
 function deleteUser(userId) {
 	User.deleteOne({ _id: userId }).then(() => {
 		console.log(`User ${userId} deleted`);
 	});
 }
+
+//deleteUser('635fd26df0f6e522704fd6f5');
 
 
 /*
@@ -71,6 +77,7 @@ function displayAllOrders() {
 		console.log('ORDERS =>', data);
 	});
 }
+//displayAllOrders();
 
 function updateOrderPaymentStatus(orderId, isPaid) {
 	Order.updateOne({ _id: orderId }, { isPaid }).then(() => {
@@ -78,20 +85,34 @@ function updateOrderPaymentStatus(orderId, isPaid) {
 	});
 }
 
+//updateOrderPaymentStatus("625ea9ca38d6a37769946511",false);
+	
 function deleteOrder(orderId) {
 	Order.deleteOne({ _id: orderId }).then(() => {
 		console.log(`Order ${orderId} deleted`);
 	});
 }
-
+//deleteOrder("625ea9ca38d6a37769946511");
 
 /*
 ** Query population
 */
 
-function displayOrderArticles(orderId) { }
+function displayOrderArticles(orderId) { 
+	Order.findById(orderId).populate('articles').then(data => {
+		console.log('displayOrderArticles =>', data.user);
+})
+}
 
-function displayUserOrders(userId) { }
+//displayOrderArticles("625ea9ca38d6a37769946512");
+
+function displayUserOrders(userId) { 
+	Order.find({user: userId }).then(data => {
+		console.log('displayUserArticles =>', data);
+
+})
+}
+//displayUserOrders("625ea9ca38d6a3776994651b");
 
 
 // Do not edit/remove code under this line
