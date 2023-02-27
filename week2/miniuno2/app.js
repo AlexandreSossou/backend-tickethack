@@ -11,43 +11,52 @@ function playUno(cards, lastPlay) { // jeu de carte + carte sur le jeu
 	let a = []
 	
 			for (let y = 0;y<cards.length;y++){
-				console.log(cardsToPlay[y])
+				console.log(`tour ${y}`)
 
 				if (cardsToPlay[y].color === lastPlay.color || cardsToPlay[y].number === lastPlay.number){
 
-				const newPlay = new Play({
-					color : cards[y].color,
-					number : cards[y].number,
-				});
-				newPlay.save();
-				;
+					const newPlay = new Play({
+						color : cards[y].color,
+						number : cards[y].number,
+					});
+					newPlay.save();
+					
+					
+					;
 				
 
 				
-				//let b = JSON.stringify(cards);
-				//console.log(cards[y])
-				a.push(cards[y])
-				console.log(`array a : ${a}`)
-				cards[y]={}
-				console.log(JSON.stringify(cards))
-				//let b = JSON.stringify(cards);
-				lastPlay = cards[y]
+					//let b = JSON.stringify(cards);
+					//console.log(cards[y])
+					//a.push(cards[y])
+					//console.log(`array a : ${a}`)
+					//cards[y]={}
+					
+					//let b = JSON.stringify(cards);
+					console.log("-----------1-------------")
+					console.log(cards[y])
+					lastPlay = []
+					lastPlay[0] = cards[y]
+					console.log("-----------2-------------")
+					console.log(lastPlay)
+					cardsToPlay[y]={}
 
 
 
-				// console.log(`lastPlay après la boucle ${y} : 
-				// ${lastPlay} `)
 
-				// console.log(`index : ${b}`)
+					// console.log(`lastPlay après la boucle ${y} : 
+					// ${lastPlay} `)
 
-				// cardsToPlay.splice(y,1)
- 				// console.log(`lastPlay après la boucle ${y} : 
-				// ${lastPlay} `)
-				// console.log(`cardsToPlay après la boucle ${y} : 
-				// ${cardsToPlay[y]} `)
+					// console.log(`index : ${b}`)
 
-				// let p = cards.indexOf(newPlay)
-				// console.log("l'indice est : " + p)
+					// cardsToPlay.splice(y,1)
+					// console.log(`lastPlay après la boucle ${y} : 
+					// ${lastPlay} `)
+					// console.log(`cardsToPlay après la boucle ${y} : 
+					// ${cardsToPlay[y]} `)
+
+					// let p = cards.indexOf(newPlay)
+					// console.log("l'indice est : " + p)
 
 				}				
 			}
