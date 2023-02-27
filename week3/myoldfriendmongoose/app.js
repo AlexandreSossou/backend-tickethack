@@ -47,18 +47,17 @@ function displayCountryPopulation(countryName) {
 	});
 }
 
-// displayCountryPopulation('Australia');
+//displayCountryPopulation('Australia');
 
 
 
 // Display country informations from city name (with populate)
 function displayCountryFromCityName(cityName) { 
-    City.findOne({ name: cityName }).then(data => {
+    City.findOne({ name: cityName }).populate('country').then(data => {
 		console.log('ARTICLE =>', data);
 	});
-
 }
 
-// displayCountryFromCityName("Sydney");
+displayCountryFromCityName("Sydney");
 
 module.exports = { createCountry, createCity, displayCountryPopulation, displayCountryFromCityName }; // Do not edit/remove this line
