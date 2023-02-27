@@ -1,13 +1,23 @@
 // Insert your code here
-const citySchema = {
+
+
+
+
+
+
+
+const mongoose = require("mongoose")
+const countriesSchema = mongoose.Schema({
     name: String,
     flagImg : String,
-    currency: Number,
-    population : {
+    currency: String,
+    population : [{
         populationNbr : Number,
         year : Date, 
-    }
+    }]
 
-}
+})
 
-const City = mongoose.model('countries', citySchema);
+const Countries = mongoose.model('countries', countriesSchema);
+
+module.exports = Countries;
