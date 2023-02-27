@@ -50,6 +50,7 @@ function resetStocks() {
 ** Users
 */
 
+
 function displayAllUsers() {
 	User.find().then(data => {
 		console.log('USERS =>', data);
