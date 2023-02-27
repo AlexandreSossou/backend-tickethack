@@ -58,6 +58,6 @@ function displayCountryFromCityName(cityName) {
 	});
 }
 
-displayCountryFromCityName("Sydney");
+//displayCountryFromCityName("Sydney");
 
 module.exports = { createCountry, createCity, displayCountryPopulation, displayCountryFromCityName }; // Do not edit/remove this line
