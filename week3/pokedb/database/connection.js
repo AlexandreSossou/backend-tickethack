@@ -1,5 +1,8 @@
 // Insert your connection string inside this variable
-const connectionString = 'mongodb+srv://.../pokeDB';
+const mongoose = require('mongoose');
+
+
+const connectionString = 'mongodb+srv://TriplePatte:PymACPQ5lJo4t07g@cluster0.nehyygn.mongodb.net/pokeDB';
 
 mongoose.set("strictQuery", true); // Remove Mongoose warning in console
 
