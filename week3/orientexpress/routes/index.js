@@ -13,17 +13,15 @@ let trips = [{ departure: 'Paris', arrival: 'Lyon' }, { departure: 'Lyon', arriv
 //     "departure": "Lyon",
 //     "arrival": "Marseille"
 //   },
-//   {
-   
-//   }
+//   {"departure": "Grenoble",
+//     "arrival": "Strasbourg"}
 // ]
 
 router.post('/trips', (req, res) => {
-    trips.push({"departure": "Grenoble",
-    "arrival": "Strasbourg"});
+    trips.push(req.body);
+
     res.json({
-        tripsList: trips})
-        console.log("push")
+        allTrips: trips})
    });
 
 
@@ -58,17 +56,21 @@ router.get('/trips', (req, res) => {
 
 router.get('/lastTrip', (req, res) => {
 
-    res.json({ tripsAll: trips[trips.length-1] });
-    //console.log(trips[2])
-    console.log("get1")
+    res.json({ lastTrip: trips[trips.length-1] });
+   
    });
 
 // DELETE /trips - Sample result:
 // "allTrips": []
 
-router.delete('/trips/:position', (req, res) => {
-    trips.splice(req.params.position, 1);
-    res.json({ deleteTrip: trips });
+router.delete('/trips', (req, res) => {
+   
+   
+        trips.splice(req.params.position, trips.length);
+        res.json({ allTrips: trips});
+    
+    
+    
    });
 
 module.exports = router;
