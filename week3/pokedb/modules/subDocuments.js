@@ -53,6 +53,24 @@ addType('pikachu', 'rock', 'brown')
 // Update type in "pokemon" collection
 function updateType(typeName, typeColor) {
   // Write your code here
+  Pokemon.updateMany(
+    { name: pokemonName },
+    { $push: {types:{
+        name: typeName,
+        color: typeColor
+      }
+    }}
+   ).then(() => {
+  
+    Pokemon.find().then(data => {
+      console.log(data);
+    });
+  
+   });
+
+
+
+
 
 }
 // updateType('rock', 'grey')
