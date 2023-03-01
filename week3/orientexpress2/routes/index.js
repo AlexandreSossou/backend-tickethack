@@ -1,24 +1,50 @@
+require('../models/connection');
 var express = require('express');
 var router = express.Router();
 
-let trips = [{ departure: 'Paris', arrival: 'Lyon' }, { departure: 'Lyon', arrival: 'Marseille' }];
+
+const Trip = require('../models/trips')
+
+
+//let trips = [{ departure: 'Paris', arrival: 'Lyon' }, { departure: 'Lyon', arrival: 'Marseille' }];
 
 router.post('/trips', (req, res) => {
-  trips.push({ departure: req.body.departure, arrival: req.body.arrival });
-  res.json({ allTrips: trips });
-});
+  //trips.push({ departure: req.body.departure, arrival: req.body.arrival });
+  const newTrip = new Trip({
+    departure: req.body.departure,
+    arrival: req.body.arrival,
+    
+   });
+   
+   newTrip.save().then(() => {
+    Trip.find().then(data => {
+      res.json({ allTrips: data });
+  });
+   });
+})
+
 
 router.get('/trips', (req, res) => {
-  res.json({ allTrips: trips });
+  Trip.find().then(data => {
+    res.json({ allTrips: data });
+  });
 });
 
 router.get('/lastTrip', (req, res) => {
-  res.json({ lastTrip: trips[trips.length - 1] });
+  Trip.find().then(data => {
+    res.json({ lastTrip: data[data.length - 1]});
+  });
+  
 });
 
 router.delete('/trips', (req, res) => {
-  trips = [];
-  res.json({ allTrips: trips });
+  Trip.deleteMany().then(() => {
+    Trip.find().then(data => {
+      res.json({ allTrips: data });
+  });
+    
+  });
+  
 });
 
 module.exports = router;
