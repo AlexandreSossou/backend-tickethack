@@ -25,6 +25,30 @@ OR
 */
 
 
+
+// POST 1
+
+
+router.post('/weather', (req, res) => {
+
+  if (weather.find(element => element.cityName.toLowerCase() === req.body.cityName.toLowerCase())) {
+
+    res.json({
+      "result": false,
+      "error": "City already saved"
+    })
+  }
+  else {
+    weather.push(req.body);
+    res.json({
+      result: true,
+      weather: req.body
+    })
+  }
+});
+
+
+
 // GET /weather - Sample result: 
 /*{
   "weather": [
@@ -49,6 +73,11 @@ OR
   ]
 } */
 
+router.get('/weather', (req, res) => {
+
+  res.json({ weather: weather });
+});
+
 
 // GET /weather/:cityName - Sample result: 
 /*{
@@ -66,6 +95,24 @@ OR
   "error": "City not found"
 } */
 
+router.get('/weather/:cityName', (req, res) => {
+  console.log(weather.find(element => element.cityName.toLowerCase() === req.params.cityName.toLowerCase()))
+  if (weather.find(element => element.cityName.toLowerCase() === req.params.cityName.toLowerCase())) {
+    res.json({
+      result: true,
+      weather: weather.find(element => element.cityName.toLowerCase() === req.params.cityName.toLowerCase())
+    })
+
+  }
+  else {
+    res.json({
+      result: false,
+      error: "City not found"
+    });
+
+  }
+
+});
 
 // DELETE /weather/:cityName - Sample result: 
 /*{
@@ -90,5 +137,20 @@ OR
   "result": false,
   "error": "City not found"
 } */
+
+router.delete('/weather/:cityName', (req, res) => {
+  let b = weather.find(e => e.cityName.toLowerCase() === req.params.cityName.toLowerCase())
+  if (b) {
+    weather.splice(weather.indexOf(b),1);
+    res.json({
+      result: true,
+      weather: weather
+    });
+
+  } else {
+    res.json({result: false,  error: "City not found"});
+
+  }
+});
 
 module.exports = router;
