@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+const fetch = require('node-fetch');
 
 let weather = [
   { cityName: "London", description: "cloudy", main: "clouds", tempMin: 12.95, tempMax: 17.39 },
@@ -19,21 +20,29 @@ let weather = [
   },
 ];
 
-
 router.post('/weather', (req, res) => {
   if (!weather.some(e => e.cityName.toLowerCase() === req.body.cityName.toLowerCase())) {
-    const newCity = {
-      cityName: req.body.cityName,
-      description: req.body.description,
-      tempMin: req.body.tempMin,
-      tempMax: req.body.tempMax,
-    };
-
+    
+    const api = `https://api.openweathermap.org/data/2.5/weather?q=${req.body.cityName}&appid=8385b7797ea204a74a398ebed94b5a71&units=metric` 
+    
+    fetch(api)
+    .then(response => response.json())
+    .then(data => {
+      const newCity = {
+        cityName: data.name,
+        main: data.weather[0].main,
+        description: data.weather[0].description,
+        tempMin: data.main.temp_min,
+        tempMax: data.main.temp_max,
+    
+    }
     weather.push(newCity);
-    res.json({ result: true, weather: newCity });
-  } else {
+    res.json({ result: true, weather: newCity });})}
+
+   else {
     res.json({ result: false, error: 'City already saved' });
-  }
+ }
+ 
 });
 
 router.get('/weather', (req, res) => {
@@ -41,6 +50,8 @@ router.get('/weather', (req, res) => {
 });
 
 router.get('/weather/:cityName', (req, res) => {
+
+
   const searchedWeather = weather.find(e => e.cityName === req.params.cityName);
 
   if (searchedWeather) {
