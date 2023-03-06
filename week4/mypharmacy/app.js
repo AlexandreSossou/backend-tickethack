@@ -6,15 +6,15 @@ var data = require('./data');
 function getDrugDescriptionByName(name){
 
     let a = data.filter(word => word.name === name)
-    console.log(a[0].name)
-   
-    return a[0].name;
+    console.log(a[0].description)
+   console.log(a)
+    return a[0].description;
     
   
 
 }
 
-getDrugDescriptionByName('Morphin');
+getDrugDescriptionByName('Codeine');
 
 
 function getDrugTypeByName(name){
@@ -28,7 +28,7 @@ function getDrugTypeByName(name){
 
 
 }
-getDrugTypeByName('Morphin')
+getDrugTypeByName('Trastuzumab')
 
 
 function getDrugNamesByGroup(group){
@@ -45,3 +45,6 @@ function getDrugNamesByGroup(group){
 }
 
 getDrugNamesByGroup('Investigational')
+
+module.exports =  { getDrugDescriptionByName, getDrugTypeByName, getDrugNamesByGroup };
+
