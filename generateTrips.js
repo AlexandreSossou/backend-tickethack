@@ -1,4 +1,4 @@
-// This program generate trips in trips.json file. Feel free to modify or improve it!
+// This program generate trips in trips.json file. Feel free to modify or improve it! Hello Alexandre
 
 const moment = require('moment');
 const momentRandom = require('moment-random');
